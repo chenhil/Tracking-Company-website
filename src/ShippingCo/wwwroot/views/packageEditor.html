@@ -1,0 +1,36 @@
+﻿
+<wait-cursor display-when="vm.isBusy"></wait-cursor>
+<div class="container" id="trackingContainer" style="margin-top:180px; margin-bottom:300px;">
+
+    <div class="pull-right" style="margin-top:20px;">
+        <a href="#!/addpackage" class="btn btn-sm btn-warning"><i class="fa fa-plus"></i> Add New</a>
+    </div>
+
+    <div class="text-danger" id="notFound" ng-show="vm.errorMessage"><center><h1>{{ vm.errorMessage }}</h1></center></div>
+
+    <div class="container">
+        <table datatable="ng">
+            <thead>
+                <tr>
+                    <th>Tracking #</th>
+                    <th>Customer Name</th>
+                    <th>Address</th>
+                    <th>Date Created</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="package in vm.packages">
+                    <td>{{package.trackingNumber}}</td>
+                    <td>{{package.customerName}}</td>
+                    <td>{{package.address}}</td>
+                    <td>{{package.dateCreated | date:'MM-dd-yyyy'}}</td>
+                    <td>
+                        <a style="color:red; cursor:pointer;"><i class="fa fa-remove" ng-click="vm.deleteTracking($index)"></i></a>
+                        <a ng-href="#!/editor/{{ package.trackingNumber }}" style="float: right; color: black;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

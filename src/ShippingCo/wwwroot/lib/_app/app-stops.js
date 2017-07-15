@@ -1,0 +1,1 @@
+!function(){angular.module("app-stops",["waitControls","ngRoute"]).config(["$routeProvider",function(o){o.when("/",{controller:"StopsController",controllerAs:"vm",templateUrl:"/views/trackingControl.html"}),o.otherwise({redirectTo:"/"})}])}();

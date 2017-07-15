@@ -1,0 +1,67 @@
+﻿@model ShippingCo.ViewModels.ContactViewModel
+@{
+    ViewBag.Title = "Contact";
+}
+
+<section class="title">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span6">
+                <h1>Contact Us</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="row-fluid" style="margin-top:20px">
+        @if (ViewBag.Usermessage != null)
+        {
+            <center><h2>@ViewBag.userMessage</h2></center>
+        }
+</div>
+<section id="contact-page" class="container" style="margin-top: 40px; margin-bottom:80px;">
+
+    <div class="row-fluid">
+        <div class="span8">
+            <span asp-validation-summary="ModelOnly"></span>
+            <h4>Contact Form</h4>
+
+            <form method="post">
+                <div class="row-fluid">
+                    <div class="span5">
+                        <label>First Name</label>
+                        <input asp-for="FirstName" class="input-block-level" required="required" placeholder="Your First Name">
+                        <label>Last Name</label>
+                        <input asp-for="LastName" class="input-block-level" required="required" placeholder="Your Last Name">
+                        <label>Email Address</label>
+                        <input asp-for="Email" class="input-block-level" required="required" placeholder="Your email address">
+                    </div>
+                    <div class="span7">
+                        <label>Message</label>
+                        <textarea asp-for="Message" id="message" required="required" class="input-block-level" rows="8"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large pull-right">Send Message</button>
+                <p> </p>
+            </form>
+        </div>
+
+        <div class="span3">
+            <h4>Our Address</h4>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            <p>
+                <i class="fa fa-map-marker pull-left"></i> 1209 Willow Oaks Lane, New York<br>
+                Lafayette, 1212,  United States
+            </p>
+            <p>
+                <i class="fa fa-envelope"></i> &nbsp;email@example.com
+            </p>
+            <p>
+                <i class="fa fa-phone"></i> &nbsp;+123 45 67 89
+            </p>
+            <p>
+                <i class="fa fa-globe"></i> &nbsp;http://www.shapebootstrap.net
+            </p>
+        </div>
+    </div>
+</section>

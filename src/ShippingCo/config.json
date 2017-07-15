@@ -1,0 +1,9 @@
+{
+  "Mailsettings": {
+    "ToAddress": "lazyman1992@gmail.com"
+  },
+  "ConnectionStrings": {
+    "ContextConnection": "Data Source=SQL5027.SmarterASP.NET;Initial Catalog=DB_A123B9_dfex;User Id=DB_A123B9_dfex_admin;Password=Sand071292;"
+
+  }
+}

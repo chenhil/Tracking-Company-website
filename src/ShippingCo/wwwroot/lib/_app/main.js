@@ -1,0 +1,1 @@
+jQuery(function(t){var o=t(".contact-form");o.submit(function(){return $this=t(this),t.post(t(this).attr("action"),function(t){$this.prev().text(t.message).fadeIn().delay(3e3).fadeOut()},"json"),!1}),t(".gototop").click(function(o){o.preventDefault(),t("html, body").animate({scrollTop:t("body").offset().top},500)})});

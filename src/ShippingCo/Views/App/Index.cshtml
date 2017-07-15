@@ -1,0 +1,214 @@
+﻿@{ 
+    ViewBag.Title = "Home Page";
+}
+
+@section scripts{
+
+}
+
+
+    <!--Slider-->
+<section id="slide-show">
+    <div id="slider" class="sl-slider-wrapper">
+
+        <!--Slider Items-->
+        <div class="sl-slider">
+            <!--Slider Item1-->
+            <div class="sl-slide item1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+                <div class="sl-slide-inner">
+                    <div class="container">
+                        <img class="pull-right" src="~/images/World_transport.png" alt="" />
+                        <h2>Creative Ideas</h2>
+                        <h3 class="gap">Tincidunt condimentum eros</h3>
+                        <a class="btn btn-large btn-transparent" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!--/Slider Item1-->
+            <!--Slider Item2-->
+            
+            @*<div class="sl-slide item2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+                <div class="sl-slide-inner">
+                    <div class="container">
+                        <img class="pull-right" src="~/lib/images/sample/slider/Boxes.png" alt="" />
+                        <h2>Planning &amp; Analysis</h2>
+                        <h3 class="gap">Aenean ultricies mi vitast</h3>
+                        <a class="btn btn-large btn-transparent" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!--Slider Item2-->
+            <!--Slider Item3-->
+            <div class="sl-slide item3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+                <div class="sl-slide-inner">
+                    <div class="container">
+                        <img class="pull-right" src="~/lib/images/sample/slider/WorldWide.png" alt="" />
+                        <h2>Unique Solutions</h2>
+                        <h3 class="gap">Breatures who have been utterly</h3>
+                        <a class="btn btn-large btn-transparent" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>*@
+            <!--Slider Item3-->
+
+        </div>
+        <!--/Slider Items-->
+        <!--Slider Next Prev button-->
+        <nav id="nav-arrows" class="nav-arrows">
+            <span class="nav-arrow-prev"><i class="fa fa-angle-left"></i></span>
+            <span class="nav-arrow-next"><i class="fa fa-angle-right"></i></span>
+        </nav>
+        <!--/Slider Next Prev button-->
+
+    </div>
+    <!-- /slider-wrapper -->
+</section>
+
+
+<section class="FindTracking">
+    <div class="container">
+        <div class="row-fluid">
+            <form class="destinations-form" method="post">
+                    <div class="span10">
+                        <input type="text" style="height:56px;" name="trackingNumber" required="required" class="input-block-level" placeholder="Tracking Number" />
+                    </div>
+                    <div class="">
+                        <input type="submit" class="form-submit btn btn-special" value="Track Package" />
+                    </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<!--Services-->
+<section id="services">
+    <div class="container">
+        <div class="center gap">
+            <h3>What We Offer</h3>
+            <p class="lead">Look at some of the recent projects we have completed for our valuble clients</p>
+        </div>
+
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="media">
+                    <div class="pull-left">
+                        <img src="~/images/ico/airplane.png" />
+                    </div>
+                    <div class="media-center-body">
+                        <h4>安全低价 海淘体验</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="span4">
+                <div class="media">
+                    <div class="pull-left">
+                        <img src="~/images/ico/box.png" />
+                    </div>
+                    <div class="media-center-body">
+                        <h4>无体积费用 多种免费增值服务</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="span4">
+                <div class="media">
+                    <div class="pull-left">
+                        <img src="~/images/ico/list.png" />
+                    </div>
+                    <div class="media-center-body">
+                        <h4>实时追踪 包裹动态</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gap"></div>
+
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="media">
+                    <div class="pull-left">
+                        <img src="~/images/ico/person.png" />
+                    </div>
+                    <div class="media-center-body">
+                        <h4>专业客服一对一服务 让您更省心</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="span4">
+                <div class="media">
+                    <div class="pull-left">
+                        <img src="~/images/ico/scale.png" />
+                    </div>
+                    <div class="media-center-body">
+                        <h4>精准到0.1计算为您省尽每一分</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="span4">
+                <div class="media">
+                    <div class="pull-left">
+                        <img src="~/images/ico/truck.png" />
+                    </div>
+                    <div class="media-center-body">
+                        <h4>注册马上拥有私人专属仓库</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--/Services-->
+
+
+<section id="clients" class="main">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span2">
+                <div class="clearfix">
+                    <h4 class="pull-left">OUR PARTNERS</h4>
+                    <div class="pull-right">
+                        <a class="prev" href="#myCarousel" data-slide="prev"><i class="fa fa-angle-left icon-large"></i></a> <a class="next" href="#myCarousel" data-slide="next"><i class="fa fa-angle-right icon-large"></i></a>
+                    </div>
+                </div>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            </div>
+            <div class="span10">
+                <div id="myCarousel" class="carousel slide clients">
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                        <div class="active item">
+                            <div class="row-fluid">
+                                <ul class="thumbnails">
+                                    <li class="span3"><a href="#"><img src="~/images/partners/ups.png" style="height:150px; width:150px;"></a></li>
+                                    <li class="span3"><a href="#"><img src="~/images/partners/dhl.png" style="height:150px; width:150px;"></a></li>
+                                    <li class="span3"><a href="#"><img src="~/images/partners/tnt.png" style="height:150px; width:150px;"></a></li>
+                                    <li class="span3"><a href="#"><img src="~/images/partners/china_ems.png" style="height:150px; width:150px;"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="row-fluid">
+                                <ul class="thumbnails">
+                                    <li class="span3"><a href="#"><img src="~/images/partners/sf_express.png" style="height:150px; width:150px;"></a></li>
+                                    <li class="span3"><a href="#"><img src="~/images/partners/china_post.png" style="height:150px; width:150px;"></a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Carousel items -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

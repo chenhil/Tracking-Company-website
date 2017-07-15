@@ -1,0 +1,41 @@
+﻿<div class="container">
+    <div class="container">
+        <div class="container" style="margin-top:80px;margin-bottom:80px;">
+            <div class="row-fluid">
+                <div class="span6" style="text-align:right;height:250px; border-right:1px #c3c3c3 solid;padding-right:20px;">
+                    <img src="/images/icon-order-fulfillment.png" alt="Track your order">
+                </div>
+                <div class="span6">
+                    <h2>Enter Tracking Number</h2>
+                    <form class="destinations-form" name="getTrackingForm" ng-submit="vm.getTracking()" style="margin-top:50px">
+                        <div>
+                            <div class="input-line">
+                                <input type="text" id="trackingNumber" required="required" name="trackingNumber" class="form-input check-value" placeholder="Tracking Number" ng-model="vm.order.number" />
+                                <input type="submit" name="trackingNumber" class="form-submit btn btn-special" value="Track Package" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <wait-cursor display-when="vm.isBusy"></wait-cursor>
+        <div class="container" id="trackingContainer" style="margin-top:180px; margin-bottom:400px; display:none;">
+            <div class="text-danger" id="notFound" ng-show="vm.errorMessage"><center><h1>{{ vm.errorMessage }}</h1></center></div>
+            <div class="row-fluid" id="trackingTable">
+                <h3>Tracking Number: {{vm.trackingNumber}}</h3>
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Location</th>
+                        <th>Activity</th>
+                    </tr>
+                    <tr ng-repeat="trip in vm.stops">
+                        <td>{{trip.date | date:'MM-dd-yyyy'}}</td>
+                        <td>{{trip.location}}</td>
+                        <td>{{trip.activity}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

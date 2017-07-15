@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Track Package";
+}
+
+@section scripts{
+    <link rel="stylesheet" href="~/css/table.css" />
+    <script type="text/javascript" src="~/lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="~/lib/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="~/js/waitControls.js"></script>
+    <script type="text/javascript" src="~/js/app-stops.js"></script>
+    <script type="text/javascript" src="~/js/StopsController.js"></script>
+
+    <environment names="Development">
+        <script type="text/javascript" src="~/js/waitControls.js"></script>
+        <script type="text/javascript" src="~/js/app-stops.js"></script>
+        <script type="text/javascript" src="~/js/StopsController.js"></script>
+    </environment>
+
+    <environment names="Production,Staging">
+        <script type="text/javascript" src="~/lib/_app/waitControls.js"></script>
+        <script type="text/javascript" src="~/lib/_app/app-stops.js"></script>
+        <script type="text/javascript" src="~/lib/_app/StopsController.js"></script>
+    </environment>
+
+}
+
+<section class="title">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span6">
+                <h1>Track Your Package</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="row-fluid" ng-app="app-stops">
+    <div ng-view></div>
+</div>

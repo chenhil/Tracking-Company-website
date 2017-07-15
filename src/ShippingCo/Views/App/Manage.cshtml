@@ -1,0 +1,49 @@
+﻿@{ 
+    ViewBag.Title = "Manage";
+}
+
+@section scripts{ 
+    <link rel="stylesheet" href="~/css/table.css" />
+    <script type="text/javascript" src="~/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="~/lib/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="~/lib/angular-datatables/dist/angular-datatables.min.js"></script>
+
+    <environment names="Development">
+        <script type="text/javascript" src="~/js/waitControls.js"></script>
+        <script type="text/javascript" src="~/js/app-ManagePackage.js"></script>
+        <script type="text/javascript" src="~/js/packageEditorController.js"></script>
+        <script type="text/javascript" src="~/js/stopEditorController.js"></script>
+        <script type="text/javascript" src="~/js/addPackage.js"></script>
+    </environment>
+
+    <environment names="Production,Staging">
+        <script type="text/javascript" src="~/lib/_app/waitControls.js"></script>
+        <script type="text/javascript" src="~/lib/_app/app-ManagePackage.js"></script>
+        <script type="text/javascript" src="~/lib/_app/packageEditorController.js"></script>
+        <script type="text/javascript" src="~/lib/_app/stopEditorController.js"></script>
+        <script type="text/javascript" src="~/lib/_app/addPackage.js"></script>
+    </environment>
+
+    <link rel="stylesheet" href="~/lib/angular-datatables/dist/css/angular-datatables.min.css" />
+
+}
+
+
+<section class="title">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span6">
+                <h1>Manage your Trackings</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container" ng-app="app-ManagePackage">
+    <div ng-view></div>
+</div>
+
+
+
